@@ -1,0 +1,7 @@
+# .gitignore
+
+# Virtual environment
+app_env/
+
+# Database
+*.sqlite3
