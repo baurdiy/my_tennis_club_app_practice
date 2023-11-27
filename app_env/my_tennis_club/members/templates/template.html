@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include "mymenu.html" with me="TOBIAS" sponsor="SONY" %}
+
+    <ul>
+        {% for x in members %}
+           <h1>{{ x.id }}</h1>
+           <p>
+                {{ x.firstname }}
+                {{ x.lastname }}
+           </p>
+        {% endfor %}
+    </ul>
+
+    <p>In views.py you can see what the fruits variable looks like.</p>
+
+    {% include 'footer.html' %}
+</body>
+</html>
