@@ -8,7 +8,12 @@
 <body>
     {% include "mymenu.html" with me="TOBIAS" sponsor="SONY" %}
 
-    <table>
+    <p>The queryset object:</p>
+    {{ mymembers }}
+
+    <p>Loop through the items:</p>
+
+    <table border="1">
         <tr>
             <th>ID</th>
             <th>Firstname</th>
@@ -17,7 +22,7 @@
         {% for x in mymembers %}
             <tr>
                 <td>{{ x.id }}</td>
-                    <td>{{ x.firstname }}</td>
+                <td>{{ x.firstname }}</td>
                 <td>{{ x.lastname }}</td>
             </tr>
         {% endfor %}
