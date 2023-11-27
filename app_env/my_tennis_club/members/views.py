@@ -27,9 +27,9 @@ def main(request):
 
 
 def testing(request):
-    mymembers = Member.objects.all().values()
+    mydata = Member.objects.all()
     template = loader.get_template('template.html')
     context = {
-        'members': mymembers,
+        'mymembers': mydata,
     }
     return HttpResponse(template.render(context, request))

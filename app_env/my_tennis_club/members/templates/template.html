@@ -8,7 +8,24 @@
 <body>
     {% include "mymenu.html" with me="TOBIAS" sponsor="SONY" %}
 
-    <ul>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        {% for x in mymembers %}
+            <tr>
+                <td>{{ x.id }}</td>
+                    <td>{{ x.firstname }}</td>
+                <td>{{ x.lastname }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
+    <!-- <ul>
         {% for x in members %}
            <h1>{{ x.id }}</h1>
            <p>
@@ -16,7 +33,7 @@
                 {{ x.lastname }}
            </p>
         {% endfor %}
-    </ul>
+    </ul> -->
 
     <p>In views.py you can see what the fruits variable looks like.</p>
 
