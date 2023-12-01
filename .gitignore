@@ -4,7 +4,7 @@
 app_env/bin
 app_env/include
 app_env/lib
-app_env/my_tennis_club/productionfiles/admin
+app_env/my_tennis_club/productionfiles/admin/
 
 # Database
 *.sqlite3
